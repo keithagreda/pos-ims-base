@@ -17,6 +17,9 @@ namespace pos_ims_base.Models
         public Guid SalesHeaderId { get; set; }
         [ForeignKey("SalesHeaderId")]
         public SalesHeader SalesHeaderFk { get; set; }
+        public Guid CustomerId { get; set; }
+        [ForeignKey("CustomerId")]
+        public Customer CustomerFk { get; set; }
     }
 
     public class SalesHeader : AuditedEntity
